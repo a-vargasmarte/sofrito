@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
-  }
+  },
+  "cacheDirectories": [
+    ".next/cache"
+  ]
 }
