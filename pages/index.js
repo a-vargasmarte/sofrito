@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import homeStyles from "../styles/Home.module.css";
 export default function Home({ articles }) {
   return (
     <div>
@@ -10,9 +10,10 @@ export default function Home({ articles }) {
           content="food recipes, tips, and recommendations for many cooking styles and levels"
         />
       </Head>
-      {articles.map((article, i) => (
-        <h3 key={i}>{article.title}</h3>
-      ))}
+      <h1>
+        <span className={homeStyles.title}>Sofrito</span>
+      </h1>
+      <p className={homeStyles.description}>Cooking info, tips, and tricks!</p>
     </div>
   );
 }
